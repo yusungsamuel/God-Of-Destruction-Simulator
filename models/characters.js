@@ -6,14 +6,14 @@ var characters = {
             callback(res);
         })
     },
-    insertOne: function(colOneName, colTwoName, colOneValue, colTwoValue, callback){
-        orm.insertOne("characters", colOneName, colTwoName, colOneValue, colTwoValue, function(res){
+    insertOne: function(name, callback){
+        orm.insertOne("characters", "name", name, function(res){
             callback(res);
         })
 
     },
-    updateOne: function(colToUpdate, updateValue, colToSearch, colValue, callback){
-        orm.updateOne("characters", colToUpdate, updateValue, colToSearch, colValue, function(res){
+    updateOne: function(updateValue, id, callback){
+        orm.updateOne("characters", "destroyed", updateValue, "id", id, function(res){
             callback(res);
         })
     }
