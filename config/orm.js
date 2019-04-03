@@ -1,30 +1,32 @@
 var connection = require("./connection.js")
 
 var orm = {
-    selectAll: function(tableName){
+    selectAll: function(tableName, callback){
         var queryString = "SELECT * FROM ??";
 
         connection.query(queryString, [tableName], function(err, result){
             if (err) throw err;
 
-            return result
+            callback(result)
         })
     },
-    insertOne: function(tableName, colOneName, colTwoName, colOneValue, colTwoValue){
+    insertOne: function(tableName, colOneName, colTwoName, colOneValue, colTwoValue, callback){
         var queryString = "INSERT INTO ??(??, ??) VALUES(? , ?)";
         
         connection.query(queryString, [tableName, colOneName, colTwoName, colOneValue, colTwoValue], function(err, result){
             if (err) throw err;
 
-            return result
+            callback(result)
         })
     }, 
-    updateOne: function(tableName, colToUpdate, updateValue, colToSearch, colValue){
+    updateOne: function(tableName, colToUpdate, updateValue, colToSearch, colValue, callback){
         var queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
         connection.query(queryString, [tableName, colToUpdate, updateValue, colToSearch, colValue], function(err, result){
             if (err) throw err;
 
-            return result;
+            callback(result);
         })
     }
 }
+
+module.exports = orm;
