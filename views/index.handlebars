@@ -1,28 +1,39 @@
-<h1>God Of Destruction Simulator</h1>
+<h1 class="display-1 text-center my-5">Beerus Simulator</h1>
 
 
-<div class="col-6 grid">
-    <ul>
-        {{#each characters}}
-        {{#if destroyed}}
-        <li>{{this.name}}</li>
-        {{/if}}
-        {{/each}}
-    </ul>
+<div class="container">
+    <img id="beerus" src="/image/Beerus.png">
+
+    <div class="row">
+        <div class="col-5 ml-5 rounded grid">
+            <h2 class="text-center">Alive</h2>
+            {{#each characters}}
+            {{#unless destroyed}}
+            {{> characters/character-buttons}}
+            {{/unless}}
+            {{/each}}
+
+        </div>
+
+        <div class="col-5 ml-5 rounded grid">
+
+            <h2 class="text-center">Destroyed</h2>
+
+            {{#each characters}}
+            {{#if destroyed}}
+            <div class="text-center text">{{this.name}}</div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
 </div>
 
-<div class="col-6 grid">
-
-    {{#each characters}}
-    {{#unless destroyed}}
-    {{> characters/character-buttons}}
-    {{/unless}}
-    {{/each}}
-
-</div>
-
-<form id="newCharacter" class="form-group">
-    <lable>Create A New Character</lable>
+<div class="mt-5 mx-auto" style="width: 500px;">
+<form id="newCharacter" class="form-group rounded my-auto">
+    <lable class="text mx-auto">Make A Wish to Bring Someone Alive</lable>
     <input type="text" id="characterName">
-    <button type="submit">Create</button>
+    
+    <button type="submit" class="btn submit-button">Shenron Arise</button>
 </form>
+</div>
+

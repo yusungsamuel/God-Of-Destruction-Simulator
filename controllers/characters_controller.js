@@ -4,8 +4,8 @@ var express = require("express");
 
 var router = express.Router();
 
-router.get("/", function(req, res){
-    characters.selectAll(function(data){
+router.get("/", function (req, res) {
+    characters.selectAll(function (data) {
         var handleBarsObj = {
             characters: data
         };
@@ -13,20 +13,22 @@ router.get("/", function(req, res){
     });
 });
 
-router.post("/api/character", function(req, res){
+router.post("/api/character", function (req, res) {
     var name = req.body.name;
-    
-    characters.insertOne(name, function(result){
-        res.redirect("/")
-    });
+
+    if (name) {
+        characters.insertOne(name, function (result) {
+            res.redirect("/")
+        });
+    }
 });
 
-router.put("/api/character/:id", function(req, res){
+router.put("/api/character/:id", function (req, res) {
     var id = req.params.id
-    characters.updateOne(true, id, function(){
-        console.log(id + " is Destroyed")
+    characters.updateOne(true, id, function () {
         res.end()
     });
 });
 
 module.exports = router;
+

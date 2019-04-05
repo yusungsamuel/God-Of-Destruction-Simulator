@@ -79,6 +79,12 @@ body {
 	margin: 0;
 }
 
+.theme-1 {
+	--color-button-bg: #121019;
+	--color-button-text: #fff;
+	--button-padding: 0.5rem 1rem;
+	--radius-button: 5px;
+}
 
 
 @media screen and (min-width: 50em) {

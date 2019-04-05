@@ -1,0 +1,73 @@
+body {
+    image-rendering: -webkit-optimize-contrast;
+    background-image: url("https://i.redd.it/m9y79gf0hx9y.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.alive {
+    font-size: 30px;
+    font-family: 'Baloo Chettan', cursive;
+    background:linear-gradient(330deg, rgb(0, 140, 255), rgb(83, 1, 83));
+}
+
+
+
+.text {
+    font-size: 30px;   
+    font-family: 'Baloo Chettan', cursive;
+    background:linear-gradient(330deg, rgb(0, 140, 255), rgb(83, 1, 83));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 {
+    text-shadow: 4px 3px 1px rgba(255, 255, 255, 0.616), 9px 8px 0px rgba(0,0,0,0.9);
+    font-family: 'Baloo Chettan', cursive;
+    background:linear-gradient(330deg, rgb(0, 140, 255), rgb(83, 1, 83));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-family: 'Baloo Chettan', cursive;
+    background:linear-gradient(330deg, rgb(0, 140, 255), rgb(83, 1, 83));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+}
+
+
+#characterName {
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.795);
+    width:70%;
+}
+
+
+.grid {
+    background: rgba(228, 226, 226, 0.519)
+}
+
+#beerus {
+    position: absolute;
+    top: 5%;
+    left:0%;
+    height:100%;
+    z-index: -1;
+}
+
+.submit-button {
+    background: linear-gradient(330deg, rgb(0, 140, 255), rgb(83, 1, 83));
+    color: white;
+    font-family: 'Baloo Chettan', cursive;
+}
+
+#newCharacter {
+background: rgba(245, 245, 245, 0.418)
+}
