@@ -1,0 +1,28 @@
+<h1>God Of Destruction Simulator</h1>
+
+
+<div class="col-6 grid">
+    <ul>
+        {{#each characters}}
+        {{#if destroyed}}
+        <li>{{this.name}}</li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>
+
+<div class="col-6 grid">
+
+    {{#each characters}}
+    {{#unless destroyed}}
+    {{> characters/character-buttons}}
+    {{/unless}}
+    {{/each}}
+
+</div>
+
+<form id="newCharacter" class="form-group">
+    <lable>Create A New Character</lable>
+    <input type="text" id="characterName">
+    <button type="submit">Create</button>
+</form>

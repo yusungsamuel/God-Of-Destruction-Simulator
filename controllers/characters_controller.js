@@ -7,7 +7,7 @@ var router = express.Router();
 router.get("/", function(req, res){
     characters.selectAll(function(data){
         var handleBarsObj = {
-            character: data
+            characters: data
         };
         res.render("index", handleBarsObj)
     });
@@ -23,9 +23,9 @@ router.post("/api/character", function(req, res){
 
 router.put("/api/character/:id", function(req, res){
     var id = req.params.id
-    var destroy = req.params.destroy
-    characters.updateOne(destroy, id, function(){
-        res.redirect("/")
+    characters.updateOne(true, id, function(){
+        console.log(id + " is Destroyed")
+        res.end()
     });
 });
 
