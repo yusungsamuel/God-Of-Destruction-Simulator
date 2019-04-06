@@ -20,5 +20,5 @@ This is a full stack application that allow user to create, read, and update con
 
 ## Acknowledge
 -  Button disintegration effect was done with Codrops - Particle Effects for Buttons.
--   Thank you to my TA Jimmy for the idea 
+-   Thank you to my TA Jimmy for the inspiration
 
