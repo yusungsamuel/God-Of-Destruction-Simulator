@@ -52,7 +52,9 @@ h2 {
 
 
 .grid {
-    background: rgba(228, 226, 226, 0.519)
+    background: rgba(228, 226, 226, 0.519); 
+    height:50vh;
+    overflow-y: scroll;
 }
 
 #beerus {
